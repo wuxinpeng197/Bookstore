@@ -10,8 +10,8 @@ require('dotenv').config();
 const async = require('async');
 
 mongoose.Promise = global.Promise;
-mongoose.connect(process.env.DATABASE)
-console.log(process.env.DATABASE)
+mongoose.connect(process.env.MONGODB_URI)
+console.log(process.env.MONGODB_URI)
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
